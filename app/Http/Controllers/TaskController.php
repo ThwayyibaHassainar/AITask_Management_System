@@ -20,13 +20,6 @@ class TaskController extends Controller
         $this->service = $service;
     }
 
-    // public function index()
-    // {
-    //     $tasks = $this->service->getAll();
-    //     $stats = $this->service->getStats();
-
-    //     return view('tasks.index', compact('tasks','stats'));
-    // }
     public function index(Request $request)
     {
         $tasks = $this->service->getAll($request->all());
